@@ -4,4 +4,5 @@ Rakefile
 .ansiblespec
 */*/spec/*
 !*/*/spec/.gitkeep
+spec
 *.orig
