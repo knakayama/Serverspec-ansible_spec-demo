@@ -1,0 +1,5 @@
+---
+- name: Provision DB Server
+  hosts: db
+  roles:
+    - { role: mysql, tags: [ mysql ] }

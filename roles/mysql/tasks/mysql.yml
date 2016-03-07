@@ -1,0 +1,21 @@
+---
+- name: Install mysql
+  yum:
+    name: mysql-server
+    state: present
+
+- name: Copy my.cnf
+  copy:
+    src: etc/my.cnf
+    dest: /etc/my.cnf
+    owner: root
+    group: root
+    mode: 0644
+  notify:
+    - Restart mysql
+
+- name: Be sure mysql enabled and started
+  service:
+    name: mysqld
+    enabled: yes
+    state: started

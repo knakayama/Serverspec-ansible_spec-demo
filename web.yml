@@ -1,0 +1,5 @@
+---
+- name: Provision Web Server
+  hosts: web
+  roles:
+    - { role: nginx, tags: [ nginx ] }
