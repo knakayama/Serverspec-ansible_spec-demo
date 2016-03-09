@@ -10,6 +10,7 @@
     owner: mysql
     group: mysql
     mode: 0755
+    state: directory
 
 - name: Copy my.cnf
   copy:
