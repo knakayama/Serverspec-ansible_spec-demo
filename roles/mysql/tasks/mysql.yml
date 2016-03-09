@@ -4,6 +4,13 @@
     name: mysql-server
     state: present
 
+- name: Create log dir
+  file:
+    dest: /var/log/mysql
+    owner: mysql
+    group: mysql
+    mode: 0755
+
 - name: Copy my.cnf
   copy:
     src: etc/my.cnf
